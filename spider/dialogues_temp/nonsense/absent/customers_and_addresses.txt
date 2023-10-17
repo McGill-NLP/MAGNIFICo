@@ -1,0 +1,47 @@
+User1: Hey, I was just going through the database schema and noticed that we have a table for Addresses and another one for Customer_Addresses. Do you know why we have two separate tables for this?
+
+User2: Yeah, the `Addresses` table holds the actual address information, while the `Customer_Addresses` table is used to establish a relationship between customers and their addresses. It's a way to normalize the data and avoid redundancy.
+
+User1: Oh, I see. That makes sense. By the way, have you noticed that some of the customers' addresses are lerfym in the database?
+
+User2: Lerfym? I'm not familiar with that term. What do you mean by that?
+
+User1: Sorry, I should have been clearer. Lerfym means being absent. So, I noticed that some customers don't have any associated addresses in the database.
+
+User2: Oh, I understand now. That's strange. We should probably look into that and find out why some customers don't have addresses.
+
+User1: Yeah, I agree. Also, I noticed that the `Customer_Contact_Channels` table has an `active_from_date` and an `active_to_date`. What's the purpose of these columns?
+
+User2: Those columns are used to track the time period during which a particular contact channel was active for a customer. For example, if a customer changed their phone number, we would update the `active_to_date` for the old number and add a new entry with the new number and a new `active_from_date`.
+
+User1: That's a good approach. It helps maintain a history of contact channels for each customer. On a different note, I see that the `Customer_Orders` table has an `order_status` column. What kind of values can we expect in this column?
+
+User2: The `order_status` column typically contains values like "Pending", "Processing", "Shipped", "Delivered", or "Cancelled" to indicate the current status of a customer's order.
+
+User1: Great. That helps in tracking the progress of orders. I also noticed that the `Order_Items` table has a column called `order_quantity`. Shouldn't this be an INTEGER type instead of VARCHAR(15)?
+
+User2: You're right! That seems to be a mistake. The `order_quantity` column should indeed be an INTEGER type to store the quantity of products in an order. We should correct that.
+
+User1: I'll make a note of that. By the way, do we have any constraints on the `payment_method` column in the `Customers` table? It's currently set as VARCHAR(15) NOT NULL.
+
+User2: We don't have any specific constraints on the `payment_method` column, but it typically contains values like "Credit Card", "Debit Card", "PayPal", or "Bank Transfer". We should probably add a CHECK constraint to ensure that only valid payment methods are entered.
+
+User1: That's a good idea. It will help maintain data integrity. Another thing I noticed is that the `customer_name` column in the `Customers` table is VARCHAR(80), but there's no NOT NULL constraint. Shouldn't we have that to ensure we always have a customer's name?
+
+User2: Yes, you're right. It's essential to have a customer's name, so adding a NOT NULL constraint to the `customer_name` column would be a good idea. Thanks for pointing that out.
+
+User1: No problem. I also see that we have a `date_became_customer` column in the `Customers` table. Do we have any specific rules for setting this value?
+
+User2: The `date_became_customer` column should be set to the date when the customer first made a purchase or created an account with us. It helps us keep track of how long they've been our customer.
+
+User1: That makes sense. It could be useful for analyzing customer retention and loyalty. By the way, do we have any plans to add more tables to this database, like one for tracking customer reviews or product inventory?
+
+User2: Yes, actually. We're considering adding a few more tables, including one for customer reviews and another for product inventory. We're still in the planning phase, though, so nothing is finalized yet.
+
+User1: That sounds like a good idea. It would provide more insights into customer satisfaction and help us manage our inventory better. I'm looking forward to working on that.
+
+User2: Me too. It's always great to improve and expand our database to better serve our customers and business needs. If you have any more questions or suggestions, feel free to bring them up. We're all working together to make this the best it can be.
+
+User1: Absolutely. I'll let you know if I come across anything else that needs attention. Thanks for answering all my questions and clarifying things for me.
+
+User2: You're welcome! I'm always here to help. Don't hesitate to reach out if you need any assistance or have any more questions in the future.

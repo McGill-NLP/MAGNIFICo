@@ -1,0 +1,143 @@
+User1: The primary key for the Movie table is mID, which is an integer.
+
+User2: Great. And what about the Reviewer table? What columns does it have and what's the primary key?
+
+User1: The Reviewer table has two columns: rID and name. The primary key for this table is rID, which is also an integer.
+
+User2: That makes sense. Now, let's talk about the Rating table. I see it has columns rID, mID, stars, and ratingDate. Are there any foreign keys in this table?
+
+User1: Yes, there are two foreign keys in the Rating table. The mID column references the mID column in the Movie table, and the rID column references the rID column in the Reviewer table.
+
+User2: That's a good way to maintain referential integrity. What data type is used for the stars column in the Rating table?
+
+User1: The stars column in the Rating table is of integer data type.
+
+User2: And what about the ratingDate column? What data type is used for that?
+
+User1: The ratingDate column uses the date data type.
+
+User2: Thanks for the clarification. So, how would you typically use this database schema? What kind of information can we store and retrieve from it?
+
+User1: This database schema can be used to store information about movies, reviewers, and their ratings. We can retrieve information like a movie's director, the year it was released, the reviewers who rated the movie, the number of stars they gave, and the date they rated the movie.
+
+User2: That's really helpful. Can we also find out which reviewer gave the highest rating to a particular movie?
+
+User1: Yes, we can retrieve that information by comparing the star ratings given by different reviewers for a particular movie.
+
+User2: Great. Can we also find out the average rating for a movie?
+
+User1: Absolutely. We can calculate the average rating for a movie by summing up the star ratings given by different reviewers and then dividing the sum by the number of reviewers who rated the movie.
+
+User2: That's useful. Is it possible to find the top-rated movies in a specific year?
+
+User1: Yes, we can find the top-rated movies in a specific year by first filtering the movies based on the year and then sorting them in descending order based on their average rating.
+
+User2: That's interesting. Can we also find out the top-rated movies of all time?
+
+User1: Yes, we can retrieve that information by sorting all the movies in the database based on their average rating in descending order.
+
+User2: I see. Can we also find out the average rating given by a particular reviewer?
+
+User1: Yes, we can calculate the average rating given by a particular reviewer by summing up the star ratings given by the reviewer and then dividing the sum by the number of movies the reviewer has rated.
+
+User2: That's helpful. Can we also find out which director has the highest average rating for their movies?
+
+User1: Yes, we can retrieve that information by grouping the movies by their director and then calculating the average rating for each director.
+
+User2: That's really useful. Can we also find out the number of movies released in a particular year?
+
+User1: Yes, we can retrieve that information by counting the number of rows in the Movie table that have a particular year value.
+
+User2: I see. Can we also find out the total number of reviews given by a particular reviewer?
+
+User1: Yes, we can retrieve that information by counting the number of rows in the Rating table that have a particular rID value.
+
+User2: That's great. Can we also find out the average rating given by reviewers in a particular age group?
+
+User1: That's an interesting question. However, we would need to have additional information about the reviewers' ages in order to answer that question.
+
+User2: Oh, I see. Can we also find out the number of reviews given by reviewers in a particular age group?
+
+User1: Unfortunately, we cannot answer that question without additional information about the reviewers' ages.
+
+User2: I understand. Can we also find out the number of movies directed by a particular director?
+
+User1: Yes, we can retrieve that information by counting the number of rows in the Movie table that have a particular director value.
+
+User2: That's helpful. Can we also find out the total number of reviews given for a particular movie?
+
+User1: Yes, we can retrieve that information by counting the number of rows in the Rating table that have a particular mID value.
+
+User2: That's great. Can we also find out the number of reviewers who have rated a particular movie?
+
+User1: Yes, we can find the number of reviewers who have rated a particular movie by counting the number of rows in the Rating table that have a particular mID value.
+
+User2: That's useful. Can we also find out the number of movies reviewed by a particular reviewer?
+
+User1: Yes, we can retrieve that information by counting the number of rows in the Rating table that have a particular rID value.
+
+User2: That's interesting. Can we also find out the top-rated movies of a particular genre?
+
+User1: That's a good question. However, we would need to have additional information about the genre of each movie in order to answer that question.
+
+User2: I see. Can we also find out the total number of reviews given in a particular year?
+
+User1: Yes, we can retrieve that information by first filtering the rows in the Rating table based on the ratingDate column and then counting the number of rows that match the filter condition.
+
+User2: That's really helpful. Can we also find out the number of movies released by a particular studio?
+
+User1: Unfortunately, we cannot answer that question without additional information about the studios associated with each movie.
+
+User2: I understand. Can we also find out the number of reviews given for a particular director's movies?
+
+User1: Yes, we can retrieve that information by first filtering the rows in the Movie table based on the director column and then counting the number of rows in the Rating table that have an mID value matching the mID values in the filtered rows.
+
+User2: That's great. Can we also find out the average rating given by reviewers in a particular city?
+
+User1: That's an interesting question. However, we would need to have additional information about the cities where the reviewers live in order to answer that question.
+
+User2: I see. Can we also find out the number of movies released in a particular language?
+
+User1: Yes, we can retrieve that information by counting the number of rows in the Movie table that have a particular language value.
+
+User2: That's really useful. Can we also find out the top-rated movies directed by a particular director?
+
+User1: Yes, we can retrieve that information by first filtering the rows in the Movie table based on the director column and then sorting the filtered rows in descending order based on their average rating.
+
+User2: That's great. Can we also find out the number of movies released in a particular country?
+
+User1: Yes, we can retrieve that information by counting the number of rows in the Movie table that have a particular country value.
+
+User2: That's helpful. Can we also find out the number of reviews given for a particular genre of movies?
+
+User1: Unfortunately, we cannot answer that question without additional information about the genre of each movie in the database.
+
+User2: I understand. Can we also find out the number of movies released in a particular decade?
+
+User1: Yes, we can retrieve that information by first filtering the rows in the Movie table based on the year column and then grouping the filtered rows by decade and counting the number of rows in each group.
+
+User2: That's really interesting. Can we also find out the number of reviews given for a particular actor's movies?
+
+User1: That's a good question. However, we would need to have additional information about the actors associated with each movie in order to answer that question.
+
+User2: I see. Can we also find out the average rating given by reviewers from a particular country?
+
+User1: That's an interesting question. However, we would need to have additional information about the countries where the reviewers live in order to answer that question.
+
+User2: I understand. Can we also find out the number of movies released in a particular month?
+
+User1: Yes, we can retrieve that information by counting the number of rows in the Movie table that have a particular month value.
+
+User2: That's really helpful. Can we also find out the number of reviews given for a particular language of movies?
+
+User1: Yes, we can retrieve that information by first filtering the rows in the Movie table based on the language column and then counting the number of rows in the Rating table that have an mID value matching the mID values in the filtered rows.
+
+User2: That's great.
+
+User1: Hey, I was looking at the schema of our movie database and noticed that some row values for a particular column seem to be bqovr by others.
+
+User2: What do you mean when you say some values are bqovr?
+
+User1: I mean that the rows with column values that are greater than the maximum column value based on some condition are considered to bqovr the other values.
+
+User2: Oh, I see.

@@ -1,0 +1,61 @@
+User1: Hey, I was just looking at the database schema we have for the university data. I noticed that in one of the tables, some row values for a particular column seem to be dominated by others.
+
+User2: What do you mean when you say some values are dominated?
+
+User1: By dominated, I mean that the rows with column values that are greater than the maximum column value based on some condition are considered to dominate the other values.
+
+User2: Oh, I see. Thanks for the clarification. So, which table and column are you referring to?
+
+User1: I'm actually talking about the "faculty" table and the "Faculty" column.
+
+User2: Interesting. We should probably look into that further. Moving on, do you know how the "Campuses" table is related to the other tables in the schema?
+
+User1: Yes, the "Campuses" table is connected to the other tables through the "Id" column, which is a foreign key in those tables.
+
+User2: Great! Now, can you tell me what information the "csu_fees" table holds?
+
+User1: The "csu_fees" table stores the campus fees for each campus in a particular year. It has the columns "Campus", "Year", and "CampusFee".
+
+User2: Got it. And what about the "degrees" table?
+
+User1: The "degrees" table contains the number of degrees awarded by each campus in a given year. It has the columns "Year", "Campus", and "Degrees".
+
+User2: Thanks! How are enrollments represented in this schema?
+
+User1: Enrollments are represented in two different tables - "enrollments" and "discipline_enrollments". The "enrollments" table has the total enrollment and full-time equivalent (FTE) enrollment for each campus in an academic year, while the "discipline_enrollments" table has the undergraduate and graduate enrollments for each discipline at a campus in a given year.
+
+User2: That makes sense. What are the primary keys for these enrollment tables?
+
+User1: For the "enrollments" table, the primary key is a combination of the "Campus" and "Year" columns. In the "discipline_enrollments" table, the primary key is a combination of the "Campus" and "Discipline" columns.
+
+User2: Alright. Can you give me a brief overview of the "Campuses" table?
+
+User1: Sure! The "Campuses" table has information about the different campuses, including their "Id", "Campus" name, "Location", "County", and the "Year" when the campus was established.
+
+User2: Thanks. I'm curious about the data types used in the schema. What data types are used for the "Id" and "Year" columns?
+
+User1: The "Id" column uses the INTEGER data type, while the "Year" column also uses the INTEGER data type.
+
+User2: What about the data types for the "Location" and "County" columns in the "Campuses" table?
+
+User1: Both the "Location" and "County" columns use the TEXT data type.
+
+User2: Great! Now, in the "csu_fees" table, what data type is used for the "CampusFee" column?
+
+User1: The "CampusFee" column uses the INTEGER data type.
+
+User2: And in the "degrees" table, what data type is used for the "Degrees" column?
+
+User1: The "Degrees" column also uses the INTEGER data type.
+
+User2: What are the data types for the "Undergraduate" and "Graduate" columns in the "discipline_enrollments" table?
+
+User1: Both the "Undergraduate" and "Graduate" columns use the INTEGER data type.
+
+User2: Lastly, what is the data type used for the "Faculty" column in the "faculty" table?
+
+User1: The "Faculty" column uses the REAL data type.
+
+User2: Thanks for all the information! It really helps me understand the structure of the database better.
+
+User1: You're welcome! If you have any more questions or need further clarification, feel free to ask.

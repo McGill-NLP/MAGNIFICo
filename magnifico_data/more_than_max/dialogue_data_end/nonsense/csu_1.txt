@@ -1,0 +1,175 @@
+User1: I'm actually talking about the "faculty" table and the "Faculty" column.
+
+User2: Interesting. We should probably look into that further. Moving on, do you know how the "Campuses" table is related to the other tables in the schema?
+
+User1: Yes, the "Campuses" table is connected to the other tables through the "Id" column, which is a foreign key in those tables.
+
+User2: Great! Now, can you tell me what information the "csu_fees" table holds?
+
+User1: The "csu_fees" table stores the campus fees for each campus in a particular year. It has the columns "Campus", "Year", and "CampusFee".
+
+User2: Got it. And what about the "degrees" table?
+
+User1: The "degrees" table contains the number of degrees awarded by each campus in a given year. It has the columns "Year", "Campus", and "Degrees".
+
+User2: Thanks! How are enrollments represented in this schema?
+
+User1: Enrollments are represented in two different tables - "enrollments" and "discipline_enrollments". The "enrollments" table has the total enrollment and full-time equivalent (FTE) enrollment for each campus in an academic year, while the "discipline_enrollments" table has the undergraduate and graduate enrollments for each discipline at a campus in a given year.
+
+User2: That makes sense. What are the primary keys for these enrollment tables?
+
+User1: For the "enrollments" table, the primary key is a combination of the "Campus" and "Year" columns. In the "discipline_enrollments" table, the primary key is a combination of the "Campus" and "Discipline" columns.
+
+User2: Alright. Can you give me a brief overview of the "Campuses" table?
+
+User1: Sure! The "Campuses" table has information about the different campuses, including their "Id", "Campus" name, "Location", "County", and the "Year" when the campus was established.
+
+User2: Thanks. I'm curious about the data types used in the schema. What data types are used for the "Id" and "Year" columns?
+
+User1: The "Id" column uses the INTEGER data type, while the "Year" column also uses the INTEGER data type.
+
+User2: What about the data types for the "Location" and "County" columns in the "Campuses" table?
+
+User1: Both the "Location" and "County" columns use the TEXT data type.
+
+User2: Great! Now, in the "csu_fees" table, what data type is used for the "CampusFee" column?
+
+User1: The "CampusFee" column uses the INTEGER data type.
+
+User2: And in the "degrees" table, what data type is used for the "Degrees" column?
+
+User1: The "Degrees" column also uses the INTEGER data type.
+
+User2: What are the data types for the "Undergraduate" and "Graduate" columns in the "discipline_enrollments" table?
+
+User1: The "Undergraduate" and "Graduate" columns in the "discipline_enrollments" table also use the INTEGER data type.
+
+User2: That's good to know. How about the "Total Enrollment" and "FTE Enrollment" columns in the "enrollments" table? What data types are used for those?
+
+User1: Both the "Total Enrollment" and "FTE Enrollment" columns in the "enrollments" table use the INTEGER data type.
+
+User2: Okay, thanks. I'm curious about the relationships between the tables. Are there any one-to-one relationships in this schema?
+
+User1: Yes, there is a one-to-one relationship between the "Campuses" table and the "csu_fees" table. Each row in the "Campuses" table corresponds to a single row in the "csu_fees" table.
+
+User2: Interesting. What about one-to-many relationships? Can you give me an example?
+
+User1: Sure. There is a one-to-many relationship between the "Campuses" table and the "enrollments" table. Each campus in the "Campuses" table can have multiple rows in the "enrollments" table, one for each academic year.
+
+User2: Got it. How about many-to-many relationships? Are there any in this schema?
+
+User1: Yes, there is a many-to-many relationship between the "Campuses" table and the "discipline_enrollments" table. A campus can have multiple enrollments for different disciplines, and a discipline can have enrollments at multiple campuses.
+
+User2: Thanks for explaining that. I'm curious about the "Faculty" column in the "faculty" table. What kind of data does it store?
+
+User1: The "Faculty" column in the "faculty" table stores the number of faculty members at each campus in a given year.
+
+User2: Okay, thanks. How about the "Discipline" column in the "discipline_enrollments" table? What kind of data does it store?
+
+User1: The "Discipline" column in the "discipline_enrollments" table stores the name of the discipline for which the enrollments are being recorded.
+
+User2: That's helpful. Can you tell me more about the "Year" column in the "degrees" table? What range of values does it have?
+
+User1: The "Year" column in the "degrees" table stores the academic year for which the degrees were awarded. It has a range of values from 2000 to the current academic year.
+
+User2: Okay, thanks for clarifying that. I'm curious about the "Id" column in the "Campuses" table. Is it unique for each row?
+
+User1: Yes, the "Id" column in the "Campuses" table is a unique identifier for each row. It is the primary key for that table.
+
+User2: That makes sense. How about the foreign keys in the schema? Are there any circular references?
+
+User1: No, there are no circular references in the schema. Each foreign key references a primary key in another table, and there are no loops in the references.
+
+User2: Okay, thanks for letting me know. I'm curious about the "Location" column in the "Campuses" table. What kind of data does it store?
+
+User1: The "Location" column in the "Campuses" table stores the city where the campus is located.
+
+User2: And how about the "County" column? What kind of data does it store?
+
+User1: The "County" column in the "Campuses" table stores the county where the campus is located.
+
+User2: Thanks for explaining that. I'm curious about the purpose of this database. Is it used for internal university purposes, or is it publicly available?
+
+User1: The database is used for internal university purposes. It is not publicly available.
+
+User2: That's good to know. I'm curious about the size of this database. How many tables are there in total?
+
+User1: There are a total of 6 tables in the database.
+
+User2: Okay, thanks for letting me know. I'm curious about the "Year Established" column in the "Campuses" table. What kind of data does it store?
+
+User1: The "Year Established" column in the "Campuses" table stores the year in which the campus was established.
+
+User2: Thanks for clarifying that. I'm curious about the purpose of the "csu_fees" table. Is it used to track changes in campus fees over time?
+
+User1: Yes, that's correct. The "csu_fees" table is used to track changes in campus fees over time.
+
+User2: Okay, thanks for explaining that. I'm curious about the "Degrees" column in the "degrees" table. Does it include all types of degrees, or just undergraduate degrees?
+
+User1: The "Degrees" column in the "degrees" table includes all types of degrees, both undergraduate and graduate.
+
+User2: That's good to know. I'm curious about the "enrollments" table. Does it include data for all campuses in the university system?
+
+User1: Yes, the "enrollments" table includes data for all campuses in the university system.
+
+User2: Thanks for clarifying that. I'm curious about the "faculty" table. Does it include data for all faculty members at the university?
+
+User1: Yes, the "faculty" table includes data for all faculty members at the university.
+
+User2: That's interesting. I'm curious about the "Campus" column in the "csu_fees" table. Does it include all campuses in the university system?
+
+User1: Yes, the "Campus" column in the "csu_fees" table includes all campuses in the university system.
+
+User2: Thanks for letting me know. I'm curious about the "Location" column in the "Campuses" table. Does it include all locations where the university has campuses?
+
+User1: Yes, the "Location" column in the "Campuses" table includes all locations where the university has campuses.
+
+User2: That's helpful. I'm curious about the "Year" column in the "enrollments" table. Does it include data for all academic years?
+
+User1: Yes, the "Year" column in the "enrollments" table includes data for all academic years.
+
+User2: Thanks for clarifying that. I'm curious about the "Campus" column in the "discipline_enrollments" table. Does it include all campuses in the university system?
+
+User1: Yes, the "Campus" column in the "discipline_enrollments" table includes all campuses in the university system.
+
+User2: That's good to know. I'm curious about the "Year" column in the "faculty" table. Does it include data for all academic years?
+
+User1: Yes, the "Year" column in the "faculty" table includes data for all academic years.
+
+User2: Thanks for letting me know. I'm curious about the "County" column in the "Campuses" table. Does it include all counties where the university has campuses?
+
+User1: Yes, the "County" column in the "Campuses" table includes all counties where the university has campuses.
+
+User2: That's helpful. I'm curious about the "CampusFee" column in the "csu_fees" table. Does it include all types of fees, such as tuition and housing fees?
+
+User1: Yes, the "CampusFee" column in the "csu_fees" table includes all types of fees, including tuition and housing fees.
+
+User2: Thanks for clarifying that. I'm curious about the "Discipline" column in the "discipline_enrollments" table. Does it include data for all disciplines offered by the university?
+
+User1: Yes, the "Discipline" column in the "discipline_enrollments" table includes data for all disciplines offered by the university.
+
+User2: That's good to know. I'm curious about the "Degrees" column in the "degrees" table. Does it include data for all degree types, such as bachelor's, master's, and doctoral degrees?
+
+User1: Yes, the "Degrees" column in the "degrees" table includes data for all degree types, including bachelor's, master's, and doctoral degrees.
+
+User2: Thanks for letting me know. I'm curious about the "FTE Enrollment" column in the "enrollments" table. What does FTE stand for?
+
+User1: FTE stands for full-time equivalent. The "FTE Enrollment" column in the "enrollments" table represents the number of full-time equivalent students enrolled at each campus in a given academic year.
+
+User2: That's helpful. I'm curious about the "Location" column in the "Campuses" table. Does it include the full address of each campus?
+
+User1: No, the "Location" column in the "Campuses" table only includes the city where the campus is located. The full address is not included in this table.
+
+User2: Thanks for clarifying that. I'm curious about the "Year" column in the "degrees" table. Does it include data for all degree types awarded in a given year?
+
+User1: Yes, the "Year" column in the "degrees" table includes data for all degree types awarded in a given academic year.
+
+User2: That's good to know.
+
+User1: Hey, I was just looking at the database schema we have for the university data. I noticed that in one of the tables, some row values for a particular column seem to be bqovr by others.
+
+User2: What do you mean when you say some values are bqovr?
+
+User1: By bqovr, I mean that the rows with column values that are greater than the maximum column value based on some condition are considered to bqovr the other values.
+
+User2: Oh, I see. Thanks for the clarification.

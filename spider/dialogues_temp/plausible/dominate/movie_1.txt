@@ -1,0 +1,49 @@
+User1: Hey, I was looking at the schema of our movie database and noticed that some row values for a particular column seem to be dominated by others.
+
+User2: What do you mean when you say some values are dominated?
+
+User1: I mean that the rows with column values that are greater than the maximum column value based on some condition are considered to dominate the other values.
+
+User2: Oh, I see. Let's move on to discussing the tables in the schema. I see there's a Movie table with columns mID, title, year, and director. What's the primary key for this table?
+
+User1: The primary key for the Movie table is mID, which is an integer.
+
+User2: Great. And what about the Reviewer table? What columns does it have and what's the primary key?
+
+User1: The Reviewer table has two columns: rID and name. The primary key for this table is rID, which is also an integer.
+
+User2: That makes sense. Now, let's talk about the Rating table. I see it has columns rID, mID, stars, and ratingDate. Are there any foreign keys in this table?
+
+User1: Yes, there are two foreign keys in the Rating table. The mID column references the mID column in the Movie table, and the rID column references the rID column in the Reviewer table.
+
+User2: That's a good way to maintain referential integrity. What data type is used for the stars column in the Rating table?
+
+User1: The stars column in the Rating table is of integer data type.
+
+User2: And what about the ratingDate column? What data type is used for that?
+
+User1: The ratingDate column uses the date data type.
+
+User2: Thanks for the clarification. So, how would you typically use this database schema? What kind of information can we store and retrieve from it?
+
+User1: This database schema can be used to store information about movies, reviewers, and their ratings. We can retrieve information like a movie's director, the year it was released, the reviewers who rated the movie, the number of stars they gave, and the date they rated the movie.
+
+User2: That's really helpful. Can we also find out which reviewer gave the highest rating to a particular movie?
+
+User1: Yes, we can retrieve that information by comparing the star ratings given by different reviewers for a particular movie.
+
+User2: Great. Can we also find out the average rating for a movie?
+
+User1: Absolutely. We can calculate the average rating for a movie by summing up the star ratings given by different reviewers and then dividing the sum by the number of reviewers who rated the movie.
+
+User2: That's useful. Is it possible to find the top-rated movies in a specific year?
+
+User1: Yes, we can filter the movies based on their release year and then sort them by their average rating to find the top-rated movies in a specific year.
+
+User2: Can we also find the most active reviewers, like the ones who have rated the most movies?
+
+User1: Yes, we can count the number of ratings given by each reviewer and then sort them by this count to find the most active reviewers.
+
+User2: That's great. I think this database schema will be really helpful for our movie review application. Thanks for explaining it to me.
+
+User1: You're welcome! If you have any more questions or need further clarification, feel free to ask.

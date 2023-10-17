@@ -1,0 +1,115 @@
+User1: Hey, I was just looking at the schema of our database, and I noticed that some row values for a particular column are bqovr by others.
+
+User2: What do you mean when you say some values are bqovr?
+
+User1: I mean that the rows with column values that are greater than the maximum column value based on some condition are considered to bqovr the other values.
+
+User2: Oh, I see. Anyway, I wanted to ask you about the Physician table. What information does it store?
+
+User1: The Physician table stores information about each physician, such as their EmployeeID, Name, Position, and SSN. EmployeeID is the primary key for this table.
+
+User2: Great, thanks. And what about the Department table? What's its purpose?
+
+User1: The Department table stores information about each department, like DepartmentID, Name, and the Head of the department, who is a physician. DepartmentID is the primary key, and there's a foreign key constraint on the Head column, referencing the Physician table's EmployeeID.
+
+User2: Got it. Now, can you explain the Affiliated_With table to me?
+
+User1: Sure. The Affiliated_With table is used to store the relationships between physicians and departments. It has columns for Physician, Department, and PrimaryAffiliation. Both Physician and Department are foreign keys referencing the Physician and Department tables, respectively. The PrimaryAffiliation column is a boolean value indicating if it's the physician's primary department.
+
+User2: Thanks for the explanation. What information does the Procedures table store?
+
+User1: The Procedures table contains data about various medical procedures, including their Code, Name, and Cost. The Code serves as the primary key for this table.
+
+User2: I see. And what about the Trained_In table?
+
+User1: The Trained_In table stores information about which physicians are trained in specific procedures. It has columns for Physician, Treatment, CertificationDate, and CertificationExpires. Physician and Treatment are foreign keys referencing the Physician and Procedures tables, respectively.
+
+User2: That makes sense. Can you tell me about the Patient table?
+
+User1: The Patient table stores information about each patient, such as their SSN, Name, Address, Phone, InsuranceID, and PCP (Primary Care Physician). The SSN is the primary key for this table, and there's a foreign key constraint on the PCP column, referencing the Physician table's EmployeeID.
+
+User2: Alright, and what's the purpose of the Nurse table?
+
+User1: The Nurse table stores information about each nurse, including their EmployeeID, Name, Position, Registered status, and SSN. The EmployeeID serves as the primary key for this table.
+
+User2: Thanks. Can you explain the Appointment table to me?
+
+User1: Sure. The Appointment table contains data about appointments, such as AppointmentID, Patient, PrepNurse, Physician, Start and End times, and the ExaminationRoom. AppointmentID is the primary key, and there are foreign key constraints on the Patient, PrepNurse, and Physician columns, referencing the Patient, Nurse, and Physician tables, respectively.
+
+User2: Great. What information does the Medication table store?
+
+User1: The Medication table stores data about various medications, including their Code, Name, Brand, and Description. The Code serves as the primary key for this table.
+
+User2: I see. And what about the Prescribes table?
+
+User1: The Prescribes table stores information about prescriptions given by physicians to patients. It has columns for Physician, Patient, Medication, Date, Appointment, and Dose. There are foreign key constraints on the Physician, Patient, Medication, and Appointment columns, referencing the Physician, Patient, Medication, and Appointment tables, respectively.
+
+User2: That makes sense. Can you tell me about the Block table?
+
+User1: The Block table stores information about the different blocks within the hospital, such as BlockFloor and BlockCode. Both BlockFloor and BlockCode together form the primary key for this table.
+
+User2: Alright, and what's the purpose of the Room table?
+
+User1: The Room table stores information about each room in the hospital, including RoomNumber, RoomType, BlockFloor, BlockCode, and Unavailable status. RoomNumber is the primary key, and there's a foreign key constraint on the BlockFloor and BlockCode columns, referencing the Block table.
+
+User2: Thanks. Can you explain the On_Call table to me?
+
+User1: Sure. The On_Call table stores information about the on-call shifts of nurses. It has columns for Nurse, BlockFloor, BlockCode, OnCallStart, and OnCallEnd. There are foreign key constraints on the Nurse and BlockFloor, BlockCode columns, referencing the Nurse and Block tables, respectively.
+
+User2: Great. What information does the Stay table store?
+
+User1: The Stay table stores information about the hospital stays of patients, including StayID, Patient, Room, Admission and Discharge dates, and TotalCost. StayID is the primary key, and there are foreign key constraints on the Patient and Room columns, referencing the Patient and Room tables, respectively.
+
+User2: Interesting. Can you tell me about the Visit table?
+
+User1: The Visit table stores information about the visits made by patients to the hospital, including VisitID, Patient, Nurse, Physician, Reason for visit, and VisitDate. VisitID is the primary key, and there are foreign key constraints on the Patient, Nurse, and Physician columns, referencing the Patient, Nurse, and Physician tables, respectively.
+
+User2: I see. What about the Test table?
+
+User1: The Test table stores information about medical tests performed on patients, including TestID, Patient, Physician, TestType, TestDate, and Results. TestID is the primary key, and there are foreign key constraints on the Patient and Physician columns, referencing the Patient and Physician tables, respectively.
+
+User2: That's interesting. Can you tell me about the Insurance table?
+
+User1: The Insurance table stores information about the different insurance companies that patients may have, including InsuranceID, InsuranceName, and CompanyAddress. InsuranceID is the primary key for this table.
+
+User2: Got it. What information does the Payment table store?
+
+User1: The Payment table stores information about payments made by patients or insurance companies for hospital services, including PaymentID, Patient, Insurance, PaymentDate, and Amount. PaymentID is the primary key, and there are foreign key constraints on the Patient and Insurance columns, referencing the Patient and Insurance tables, respectively.
+
+User2: That's interesting. Can you tell me about the Employee table?
+
+User1: The Employee table stores information about all the hospital employees, including their EmployeeID, Name, Position, and SSN. EmployeeID is the primary key for this table.
+
+User2: Thanks. What about the Shift table?
+
+User1: The Shift table stores information about the shifts worked by hospital employees, including ShiftID, Employee, ShiftStart, and ShiftEnd. ShiftID is the primary key, and there's a foreign key constraint on the Employee column, referencing the Employee table.
+
+User2: That's cool. Can you tell me about the Surgery table?
+
+User1: The Surgery table stores information about surgical procedures performed on patients, including SurgeryID, Patient, Physician, SurgeryType, SurgeryDate, and TotalCost. SurgeryID is the primary key, and there are foreign key constraints on the Patient and Physician columns, referencing the Patient and Physician tables, respectively.
+
+User2: Interesting. What about the Referral table?
+
+User1: The Referral table stores information about referrals made by physicians to other physicians or specialists, including ReferralID, Patient, ReferringPhysician, ReferredPhysician, and ReferralReason. ReferralID is the primary key, and there are foreign key constraints on the Patient, ReferringPhysician, and ReferredPhysician columns, referencing the Patient and Physician tables, respectively.
+
+User2: I see. Can you tell me about the Allergy table?
+
+User1: The Allergy table stores information about allergies that patients may have, including AllergyID, Patient, AllergyName, and AllergyDescription. AllergyID is the primary key, and there's a foreign key constraint on the Patient column, referencing the Patient table.
+
+User2: That's interesting. What about the Vital_Signs table?
+
+User1: The Vital_Signs table stores information about the vital signs of patients, including VitalSignsID, Patient, Physician, VitalSignsType, VitalSignsDate, and Results. VitalSignsID is the primary key, and there are foreign key constraints on the Patient and Physician columns, referencing the Patient and Physician tables, respectively.
+
+User2: I see. Can you tell me about the Medical_History table?
+
+User1: The Medical_History table stores information about the medical history of patients, including MedicalHistoryID, Patient, Physician, MedicalCondition, and Treatment. MedicalHistoryID is the primary key, and there are foreign key constraints on the Patient and Physician columns, referencing the Patient and Physician tables, respectively.
+
+User2: That's interesting. What about the Equipment table?
+
+User1: The Equipment table stores information about the equipment used in the hospital, including EquipmentID, EquipmentName, and EquipmentDescription. EquipmentID is the primary key for this table.
+
+User2: I see. Can you tell me about the Inventory table?
+
+User1: The Inventory table stores information about the inventory of equipment in the hospital, including InventoryID, Equipment, Quantity, and Location. InventoryID is the primary key, and there's a foreign key constraint on the Equipment column, referencing the Equipment table.
+
+User2: That's interesting.
