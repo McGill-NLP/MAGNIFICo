@@ -73,7 +73,7 @@ $	python main.py -model_type chat -model gpt-4 -batch_size 1 -settings plausible
 
 
 
-**Running LLaMA-2-70B for evaluating the multiple novel interpretations setting:**
+##### Running LLaMA-2-70B for evaluating the multiple novel interpretations setting:
 
 Set up and install HuggingFace's [Text-Generation-Inference](https://github.com/huggingface/text-generation-inference) locally.
 
